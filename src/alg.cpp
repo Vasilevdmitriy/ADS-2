@@ -47,7 +47,7 @@ int med;
 int index;
   
   
-  
+while(ii < ((len-2)/2))
 int valuei = arr[ii];
 int valuer = value-arr[ii];
 
