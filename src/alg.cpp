@@ -1,8 +1,6 @@
 // Copyright 2021 NNTU-CS
 
 int countPairs1(int *arr, int len, int value) {
-// clock_t start = clock();
-
 int c1 = 0;
 for(int i = 0;i < len - 1;i++) { 
 for(int j = i + 1; j < len; j++) { 
@@ -11,10 +9,6 @@ if((arr[i] + arr[j]) == value)c1++;
 }
 if(c1 >= 0) {
 return c1;} else {return 0;}
-
-  //clock_t end = clock();
- // double seconds = (double)(end - start) / CLOCKS_PER_SEC;
- // return seconds;
 }
 
 int countPairs2(int *arr, int len, int value) {
@@ -40,16 +34,15 @@ int c3 = 0;
 int ii=0;
 
 
- 
-int l = 1;
-int r = len;
 int med;
 int index;
-  
+
   
 while(ii < ((len-2)/2)){ 
 int valuei = arr[ii];
 int valuer = value-arr[ii];
+int l = 1;
+int r = len;
 
 while (l <= r) { 
 med = l + (r - l) / 2;
