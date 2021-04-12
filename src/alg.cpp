@@ -4,8 +4,8 @@ int countPairs1(int *arr, int len, int value) {
 // clock_t start = clock();
 
 int c1 = 0;
-for(i = 0;i < len - 1;i++){
-for(j = i + 1;j < len;j++){
+for(int i = 0;i < len - 1;i++){
+for(int j = i + 1;j < len;j++){
 if((arr[i] + arr[j]) == value)c1++;
 }
 }
@@ -42,12 +42,12 @@ int ii=0;
 
  
 int l = 1;
-int r = size;
+int r = len;
 int med;
 int index;
   
   
-while(ii < ((len-2)/2))
+while(ii < ((len-2)/2)){
 int valuei = arr[ii];
 int valuer = value-arr[ii];
 
