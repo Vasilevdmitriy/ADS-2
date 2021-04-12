@@ -18,7 +18,7 @@ int c2 = 0;
 
 while(arr[rg] > value)
 rg--;
-while(lg > rg){ 
+while(lg <= rg){ 
 if((arr[lg] + arr[rg]) == value){ c2++;
 lg++;}else{ 
 rg--;
