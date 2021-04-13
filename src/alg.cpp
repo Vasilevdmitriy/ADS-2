@@ -31,14 +31,13 @@ return 0;}
 
 int countPairs3(int *arr, int len, int value) { 
 int c3 = 0;
-int ii=0;
 
 
 int med;
 int index;
 
   
-while(ii < ((len-2)/2)){ 
+for(int ii =0; ii < len-1;ii++){ 
 int valuei = arr[ii];
 int valuer = value-arr[ii];
 int l = 1;
