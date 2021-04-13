@@ -25,7 +25,7 @@ rg--;
 lg = 0;
 }
 }
-if(c2 >= 0) return c2; else {
+if(c2 >= 0) {return c2; } else {
 return 0;}
 }
 
