@@ -58,7 +58,7 @@ return 0;
 }
 }
 if (index >= 0) {
-for (int i = index; i >= 0; i--) {
+for (int i = index; i >= ii; i--) {
 if (arr[i] == valuer) {
 c3++;
 }
