@@ -75,7 +75,7 @@ ii++;
 }
 
 if(c3 >= 0) {
-return (c3/2);
+return c3;
 } else { return 0; }
 }
 
