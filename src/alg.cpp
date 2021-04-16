@@ -48,7 +48,9 @@ int r = len-1;
 
 while (l <= r) {
 med = l + (r - l) / 2;
-if (arr[med] <= valuer) {
+if (arr[med] > valuer) {
+r = med - 1;
+} else if (arr[med] < valuer) {
 l = med + 1;
 } else {
 index = med;
