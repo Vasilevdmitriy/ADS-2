@@ -19,17 +19,17 @@ int rg = len - 1;
 int lg = 0;
 int c2 = 0;
 
-while(arr[rg] > value){
+while(arr[rg] > value) {
 rg--;
 }
 
-while(lg <= rg) { 
-if(((arr[rg]+arr[lg]) == value)&&(lg<rg)){c2++;
+while(lg <= rg) {
+if(((arr[rg] + arr[lg]) == value)&&(lg < rg)) {c2++;
 lg++;
-} else if(((arr[rg] + arr[lg]) < value)&&(lg<rg)){lg++;
+} else if(((arr[rg] + arr[lg]) < value)&&(lg < rg)) {lg++;
 }
 else{rg--;
-lg=0;
+lg = 0;
 }
 }
 return c2;
