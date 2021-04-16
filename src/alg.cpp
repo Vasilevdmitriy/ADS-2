@@ -45,13 +45,10 @@ int ii = 0;
 int med;
 int index;
 
-
-
 while(ii < len-1) {
 int valuer = value-arr[ii];
 int l = ii+1;
 int r = len-1;
-
 
 while (l <= r) {
 med = l + (r - l) / 2;
