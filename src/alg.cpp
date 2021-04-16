@@ -56,11 +56,9 @@ if (arr[med] > valuer) {
 r = med - 1;
 } else if (arr[med] < valuer) {
 l = med + 1;
-} else if (arr[med] == valuer) {
+} else {
 index = med;
 break;
-} else {
-return 0;
 }
 }
 if (index >= 0) {
