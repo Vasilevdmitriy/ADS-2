@@ -25,9 +25,9 @@ rg--;
 }
 
 while(lg <= rg) { 
-if(((arr[rg]+arr[lg]) == value)){if(lg<rg){c2++;
-lg++;}
-} else if(((arr[rg] + arr[lg]) < value)){if(lg<rg){lg++;}
+if(((arr[rg]+arr[lg]) == value)&&(lg<rg)){c2++;
+lg++;
+} else if(((arr[rg] + arr[lg]) < value)&&(lg<rg)){lg++;
 }
 else{rg--;
 lg=0;
