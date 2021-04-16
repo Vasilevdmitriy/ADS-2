@@ -34,68 +34,47 @@ lg = 0;
 return c2;
 }
 
-int countPairs3(int *arr, int len, int value) 
-{
-    int c3 = 0;
-    int ii = 0;
+int countPairs3(int *arr, int len, int value) {
+int c3 = 0;
+int ii = 0;
 
-    int med;
-    int index;
+int med;
+int index;
 
-    while(ii < len - 1) 
-    {
-        int valuer = value - arr[ii];
-        int l = ii + 1;
-        int r = len - 1;
+while(ii < len-1) {
+int valuer = value-arr[ii];
+int l = ii+1;
+int r = len-1;
 
-        while (l <= r) 
-        {
-            med = l + (r - l) / 2;
-            if (arr[med] > valuer)
-            {
-                r = med - 1;
-            } 
-            else if (arr[med] < valuer) 
-            {
-                l = med + 1;
-            }
-            index = med;
-            break;
-        
-        }
-    
-        if (index >= 0) 
-        {
-            int i = index;
-            while (i > ii)
-            {
-                if (arr[i] == valuer) 
-                {
-                    c3++;
-                }
-                i = i - 1;
-            }
-        }
-        
-        if (len > index) 
-        {
-            for (int i = index + 1; i < len; i++) 
-            {
-                if (arr[i] == valuer) 
-                {
-                    c3++;
-                }
-            }
-        }
-        ii++;
-    }
-    
-    if(c3 >= 0) 
-    {
-        return c3;
-    }
-    return 0; 
-
-//
+while (l <= r) {
+med = l + (r - l) / 2;
+if (arr[med] > valuer) {
+r = med - 1;
+} else if (arr[med] < valuer) {
+l = med + 1;
+} else {
+index = med;
+break;
+}
+}
+if (index >= 0) {
+for (int i = index; i > ii; i--) {
+if (arr[i] == valuer) {
+c3++;
+}
+}
+}
+if (len > index) {
+for (int i = index + 1; i < len; i++) {
+if (arr[i] == valuer) {
+c3++;
+}
+}
+}
+ii++;
 }
 
+if(c3 >= 0) {
+return c3;
+} else { return 0; }
+}
