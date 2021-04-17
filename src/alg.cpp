@@ -31,20 +31,23 @@ lg++;
 lg = 0;
 }
 }
+if(c2 >= 0) {
 return c2;
+} else {
+return 0;
+}
 }
 
 int countPairs3(int *arr, int len, int value) {
 int c3 = 0;
 int ii = 0;
 
-int med, index, l, r, valuer, i;
+int med, index, l, r, valuer;
 
 while(ii < len-1) {
 valuer = value-arr[ii];
 l = ii+1;
 r = len-1;
-
 while (l <= r) {
 med = l + (r - l) / 2;
 if (arr[med] > valuer) {
@@ -56,19 +59,15 @@ index = med;
 break;
 }
 }
-if (index >= 0) {
-for (i = index; i > ii; i--) {
-if (arr[i] == valuer) {
+int i = index;
+while ((i > ii) && (index >= 0) && (arr[i] == valuer)) {
 c3++;
+i--;
 }
-}
-}
-if (len > index) {
-for (i = index + 1; i < len; i++) {
-if (arr[i] == valuer) {
+i = index + 1;
+while((i < len) && (len > index) && (arr[i] == valuer)) {
 c3++;
-}
-}
+i++;
 }
 ii++;
 }
