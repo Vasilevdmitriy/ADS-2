@@ -5,11 +5,13 @@ int c1 = 0;
 int i;
 int j;
 int r = len-1;
+
 for(i = 0; i < r; i++) {
 for(j = i + 1; j < r+1; j++) {
 if((arr[i] + arr[j]) == value)c1++;
 }
 }
+
 if(c1 >= 0) {
 return c1;} else {return 0;}
 }
@@ -48,6 +50,7 @@ while(ii < len-1) {
 valuer = value-arr[ii];
 l = ii+1;
 r = len-1;
+
 while (l <= r) {
 med = l + (r - l) / 2;
 if (arr[med] > valuer) {
@@ -59,11 +62,13 @@ index = med;
 break;
 }
 }
+
 int i = index;
 while ((i > ii) && (index >= 0) && (arr[i] == valuer)) {
 c3++;
 i--;
 }
+
 i = index + 1;
 while((i < len) && (len > index) && (arr[i] == valuer)) {
 c3++;
